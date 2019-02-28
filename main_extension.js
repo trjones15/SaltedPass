@@ -6,18 +6,11 @@ var need_special;
 var need_number;
 var need_capital;
 
-
-//finish css
-//save special character and capital letter and number preference per website
-//shorten hash
-//add ability to have a number and special character and capital letter
-
 document.addEventListener('DOMContentLoaded', function() {
-//window.addEventListener('load', function(){
 	var promise1 = new Promise(function(resolve, reject) {
 		chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, 	function (tabs){
 			var url = tabs[0].url;
-			document.getElementById('webname').innerHTML = 'The Website you are on is: ' + url;
+			document.getElementById('web_name').innerHTML = 'The Website you are on is: ' + url;
 			resolve(url);
 	  });
 	});
@@ -29,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		console.log(parser.hostname);
 		parsed_url = parser.hostname;
 		
-		document.getElementById('webname').innerHTML = 'The Website you are on is: ' + parsed_url;
+		document.getElementById('web_name').innerHTML = 'The Website you are on is: ' + parsed_url;
 		
 		//set checks
 		getOptions(parsed_url);
@@ -145,4 +138,3 @@ function getOptions(website) {
 		document.getElementById('cap_char').checked = need_capital;
     });
 }
-

@@ -5,7 +5,7 @@ textarea{
 }
 
 #go-to-options {
-  background-image: url(./settings_button.png);
+  background-image: url(./current_salts_button.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-color: white;
@@ -22,9 +22,17 @@ textarea{
 
 #title {
 	display:inline-block;
+	text-align: center;
 }
 
-div {
-	width: 250px;
-	white-space: nowrap;
+#total_area {
+	width: 350px;
+}
+
+#web_name {
+	text-align: center;
+}
+
+#title_area {
+	width: 350px;
 }
