@@ -1,0 +1,30 @@
+textarea{
+	resize: none;
+	width: 250px;
+	height: 18px;
+}
+
+#go-to-options {
+  background-image: url(./settings_button.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: white;
+  /* put the height and width of your image here */
+  height: 25px;
+  width: 25px;
+  border: none;
+  float: right;
+}
+
+#butt_span {
+	display:none;
+}
+
+#title {
+	display:inline-block;
+}
+
+div {
+	width: 250px;
+	white-space: nowrap;
+}

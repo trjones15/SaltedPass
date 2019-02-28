@@ -1,0 +1,18 @@
+{
+ "manifest_version": 2,
+ "name": "PasswordVault",
+ "description": "Better form of a password manager",
+ "version": "1",
+ "author": "Trevor Jones",
+ "options_page": "current_salts.html",
+"browser_action": {
+   "default_title": "Hover over this to get your password!",
+   "default_popup": "newtab.html"
+ },
+ "content_scripts": [{
+	"matches": ["http://*/*", "https://*/*"],
+	"js": ["autofill.js"],
+	"run_at": "document_start"
+ }],
+ "permissions": ["activeTab", "clipboardWrite", "tabs", "storage"]
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <body>
+  <link rel="stylesheet" href="master_pass.css">
+  <script type="module" src="chromeextentjava.js"></script>
+	<div>
+		<h2 id="title">One Password for All!</h2>
+		<button id="go-to-options"><span id="butt_span">Go to options</span></button>
+	</div>
+	<h5 id='webname'></h5>
+	<form id='form1'>
+		<div>
+		  <input type="checkbox" id="spec_char" name="spec_char"
+				 checked>
+		  <label for="spec_char">Special Character Required</label>
+		</div>
+		<div>
+		  <input type="checkbox" id="num_char" name="num_char"
+				 checked>
+		  <label for="num_char">Number Required</label>
+		</div>
+		<div>
+		  <input type="checkbox" id="cap_char" name="cap_char"
+				 checked>
+		  <label for="cap_char">Capital Letter Required</label>
+		</div>
+		Master Password: <input type="password" id='master' name="password">
+		<input type="submit" value="Submit">
+	</form>
+	<form id='form2'>
+		<textarea id='newpass' readonly rows='1' cols='32'></textarea>
+		<input type="submit" value="Copy">
+	</form>
+  </body>
+</html>
