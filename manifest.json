@@ -7,7 +7,7 @@
  "options_page": "current_salts.html",
 "browser_action": {
    "default_title": "Hover over this to get your password!",
-   "default_popup": "MainExtension.html"
+   "default_popup": "main_extension.html"
  },
  "content_scripts": [{
 	"matches": ["http://*/*", "https://*/*"],
