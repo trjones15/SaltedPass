@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function copyPass(evt) {
 	evt.preventDefault();
 	
-	let new_pass = document.getElementById('newpass');
+	let new_pass = document.getElementById('new_pass');
 	new_pass.select();
 	
 	document.execCommand("copy");
@@ -76,7 +76,7 @@ function calculatePass(evt) {
 		new_pass = new_pass + "A";
 	}
 	
-	document.getElementById('newpass').innerHTML = new_pass;
+	document.getElementById('new_pass').innerHTML = new_pass;
 	
 	chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 	  chrome.tabs.sendMessage(tabs[0].id, {pass: new_pass}, function(response) {

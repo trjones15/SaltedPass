@@ -1,38 +1,264 @@
 textarea{
 	resize: none;
-	width: 250px;
-	height: 18px;
-}
-
-#go-to-options {
-  background-image: url(./current_salts_button.png);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-color: white;
-  /* put the height and width of your image here */
-  height: 25px;
-  width: 25px;
-  border: none;
-  float: right;
-}
-
-#butt_span {
-	display:none;
+	text-align:center;
 }
 
 #title {
 	display:inline-block;
 	text-align: center;
+	margin:8px;
 }
 
 #total_area {
 	width: 350px;
+	margin: 0px;
 }
 
 #web_name {
 	text-align: center;
 }
 
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 7px;
+  top: 2px;
+  width: 3px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  border: none;
+  color: #FFFFFF;
+  text-align: right;
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 0px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#options_button {
+	background-color:#4CAF50;
+}
+
+#go-to-options {
+	display: block;
+	align: right;
+}
+
+#explanation {
+	margin: 0px;
+}
+
 #title_area {
 	width: 350px;
+	text-align:center;
+}
+
+#checkboxes_area {
+	width: 80%;
+}
+
+#form_area {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#form1 {
+	margin:10px;
+}
+
+#form1_submit {
+	width: 100%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-bottom:0px;
+}
+
+#form1_submit:hover {
+	background-color: #45a049;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#master{
+	width: 100%;
+}
+
+#form2 {
+	margin: 10px;
+}
+
+#new_pass {
+	width: 100%;
+	padding: 0px;
+}
+
+.pass_container {
+	display: block;
+	position: relative;
+	font-size: 16px;
+	font-weight:bold;
+}
+
+#form2_submit {
+	width: 100%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 8px 14px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-bottom:0px;
+	text-align:center;
+}
+
+#form2_submit:hover {
+	background-color: #45a049;
 }

@@ -3,33 +3,47 @@
   <body id = "total_area">
   <link rel="stylesheet" href="main_extension.css">
   <script type="module" src="main_extension.js"></script>
-	<button id="go-to-options"><span id="butt_span">Go to options</span></button>
-	<div id="title_area">
-		<h2 id="title">One Password for All!</h2>
+	<div id="options_button">
+		<button class="button" id="go-to-options"><span id="butt_span">To Salts</span></button>
 	</div>
-	<h5 id='web_name'></h5>
+	<div id="title_area">
+		<h1 id="title">SaltedPass!</h1>
+		<h3 id="explanation">Enter your master password in order to have it hashed and autofilled into the webpage.</h3>
+	</div>
+	<h4 id='web_name'></h4>
 	<form id='form1'>
-		<div>
-		  <input type="checkbox" id="spec_char" name="spec_char"
-				 checked>
-		  <label for="spec_char">Special Character Required</label>
+		<div id='form_area'>
+			<div id='checkboxes_area'>
+				<label class="container">Special Character Required
+					<input type="checkbox" id="spec_char" name="spec_char"
+						 checked="checked">
+					<span class="checkmark"></span>
+				</label>
+				<label class="container">Number Required
+					<input type="checkbox" id="num_char" name="num_char"
+						 checked="checked">
+					<span class="checkmark"></span>
+				</label>
+				<label class="container">Capital Letter Required
+					<input type="checkbox" id="cap_char" name="cap_char"
+						 checked="checked">
+					<span class="checkmark"></span>
+				</label>
+			</div>
+			<div id='pass_area'>
+				<div id='pass_area_label'>
+					<label class='pass_container' for='master'>Master Password:</label>
+				</div>
+				<div id='pass_area_input'>
+					<input type="password" id='master' name="password" placeholder="Password">
+				</div>
+			</div>
+			<input id='form1_submit' type="submit" value="Submit">
 		</div>
-		<div>
-		  <input type="checkbox" id="num_char" name="num_char"
-				 checked>
-		  <label for="num_char">Number Required</label>
-		</div>
-		<div>
-		  <input type="checkbox" id="cap_char" name="cap_char"
-				 checked>
-		  <label for="cap_char">Capital Letter Required</label>
-		</div>
-		Master Password: <input type="password" id='master' name="password">
-		<input type="submit" value="Submit">
 	</form>
 	<form id='form2'>
-		<textarea id='newpass' readonly rows='1' cols='32'></textarea>
-		<input type="submit" value="Copy">
+		<textarea id='new_pass' readonly rows='1' cols='32' placeholder = 'Your new password will appear here!'></textarea>
+		<input id='form2_submit' type="submit" value="Copy">
 	</form>
   </body>
 </html>

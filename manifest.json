@@ -1,6 +1,6 @@
 {
  "manifest_version": 2,
- "name": "PasswordVault",
+ "name": "SaltedPass",
  "description": "Better form of a password manager",
  "version": "1",
  "author": "Trevor Jones",
